@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+         //..... YOUR CODE STARTS HERE .....
+        //int n =scanner.nextInt();
+        int year = 0;
+        int month = 0;
+        for (int i=0;i<4;i++){
+            int num = scanner.nextInt();
+            if (num==-1) break;
+            else if (num > 12) year = num;
+            else if(num > 0) month = num;
+        }
+        switch(month){
+            case 1: System.out.println(31);
+            break;
+            case 2: 
+                if((year%4==0 && year%100 != 0 ) || year%400 == 0){
+                    System.out.println(29);
+                }
+                else System.out.println(28);
+            break;
+            case 3:System.out.println(31);
+            break;
+            case 4:System.out.println(30);
+            break;
+            case 5:System.out.println(31);
+            break;
+            case 6:System.out.println(30);
+            break;
+            case 7:System.out.println(31);
+            break;
+            case 8:System.out.println(31);
+            break;
+            case 9:System.out.println(30);
+            break;
+            case 10:System.out.println(31);
+            break;
+            case 11:System.out.println(30);
+            break;
+            case 12:System.out.println(31);
+            break;
+            default: System.out.println("Invalid Input");
+            break;
+        }
+        
+        
+        
+        //..... YOUR CODE ENDS HERE .....
+        
+        scanner.close();
+    }
+}
