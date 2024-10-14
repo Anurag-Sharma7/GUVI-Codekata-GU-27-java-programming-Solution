@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //..... YOUR CODE STARTS HERE .....
+        
+        Scanner sc= new Scanner(System.in);
+        int N=sc.nextInt();
+        int C=sc.nextInt();
+        int V=sc.nextInt();
+        for(int i=1;i<=V;i++){
+            int ID = sc.nextInt();
+            if(ID<=C){
+                System.out.println("VALID");
+            }
+            else{
+                System.out.println("INVALID");
+            }
+        }
+        
+        
+        
+        //..... YOUR CODE ENDS HERE .....
+    }
+}
