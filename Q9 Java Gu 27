@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String make = scanner.next();
+        String model = scanner.next();
+        int year = scanner.nextInt();
+        int currentYear = scanner.nextInt();
+
+        Car car = new Car(make, model, year);
+        int age = car.getCarAge(currentYear);
+
+        if (age != -1) {
+            System.out.println(age);
+        }
+    }
+}
+
+class Car {
+    //..... YOUR CODE STARTS HERE .....
+    String make;
+    String model;
+    int year;
+    int currentYear;
+    
+    Car(String m,String m1,int y){
+        this.make =m;
+        this.model=m1;
+        this.year=y;
+    }
+    public int getCarAge(int cy){
+        return cy-this.year;
+    }
+    
+    
+    //..... YOUR CODE ENDS HERE .....
+}
