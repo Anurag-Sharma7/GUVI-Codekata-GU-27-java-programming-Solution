@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        //..... YOUR CODE STARTS HERE .....
+        
+        int n =scanner.nextInt();
+        int [] marks =new int[n];
+        for (int i=0;i<marks.length;i++){
+            if(marks[i]==-1){
+                break;
+            }
+            int num =scanner.nextInt();
+            marks[i]=num;
+        }
+        for(int i=0;i<marks.length;i++){
+        if(marks[i]>=90 && marks[i]<=100){
+            System.out.println("Excellent");
+        }
+        else if(marks[i]>=75 && marks[i]<=89){
+            System.out.println("Good");
+        }
+        else if (marks[i]>=50 && marks[i]<=74){
+            System.out.println("Average");
+        }
+        else if (marks[i]>=35 && marks[i]<=49){
+            System.out.println("Pass");
+        }
+        else{
+            System.out.println("Fail");
+        }
+        }
+        
+        //..... YOUR CODE ENDS HERE .....
+        scanner.close();
+    }
+}
